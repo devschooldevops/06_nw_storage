@@ -8,7 +8,7 @@
  ip route
  cat /etc/resolv.conf
 ```
-- The ip tool is the new tool to inspect and modify your network configuration, and is installed by default. The LPI exam also requires knowledge of the 'deprecated' tools ifconfig and route. Install these and use them to look at your network configuration as well.
+- The ip tool is the new tool to inspect and modify your network configuration, and is installed by default. Install these legacy tools and use them to look at your network configuration as well.
 ```bash
 #install ifconfig with yum
  yum -y install net-tools
@@ -41,11 +41,10 @@ ping dns.google.come
 - Restore the /etc/hosts and /etc/nsswitch files to their former configuration.
 
 ## Network Troubleshooting
-- Use the ethtool to look at the status of your adapters at the link level. Which modes are supported, and which mode is chosen?
+- Use the ethtool to look at the status of your adapters at the link level. Which modes are supported, and which mode is chosen? Info:make sure you use your coresponding adapter.
 ```bash
  ethtool ens33
 ```
-
 - Use ip and ifconfig to look at your adapters at the IP level. Do you see the IP address, subnetmask, MTU and adapter state?
 ```bash
  ip addr
